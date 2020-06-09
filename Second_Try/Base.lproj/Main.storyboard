@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,101 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Second_Try" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My New App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lZ-Rt-Sno">
+                                <rect key="frame" x="62" y="118" width="292" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37H-ab-t3a">
+                                <rect key="frame" x="184" y="308" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7V2-4E-265"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your first name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-ID-QPU">
+                                <rect key="frame" x="55" y="187" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your last name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-WP-UHI">
+                                <rect key="frame" x="55" y="253" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvZ-lr-CKe">
+                                <rect key="frame" x="232" y="248" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-or-c37">
+                                <rect key="frame" x="232" y="187" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stS-dC-Xjd">
+                                <rect key="frame" x="0.0" y="826" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4oj-sw-I7l"/>
+                                    <barButtonItem title="Item" image="pencil" catalog="system" id="dRG-0O-vlu"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="JcN-df-CoC"/>
+                                    <barButtonItem title="Item" image="tray" catalog="system" id="HFH-mS-f0A"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="dlY-cC-6Pf"/>
+                                    <barButtonItem title="Item" image="folder" catalog="system" id="lhD-eb-d9M"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Qa7-p9-eO9"/>
+                                    <barButtonItem title="Item" image="doc.text" catalog="system" id="S9J-jC-rm5"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="bUv-31-Afy"/>
+                                    <barButtonItem title="Item" image="trash" catalog="system" id="vhL-Hj-mFU"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AAQ-WP-UHI" firstAttribute="baseline" secondItem="xvZ-lr-CKe" secondAttribute="baseline" id="1Mb-X9-T0C"/>
+                            <constraint firstItem="WdZ-ID-QPU" firstAttribute="top" secondItem="9lZ-Rt-Sno" secondAttribute="bottom" constant="41.5" id="3Uy-E8-RTX"/>
+                            <constraint firstItem="xvZ-lr-CKe" firstAttribute="top" secondItem="CTZ-or-c37" secondAttribute="bottom" constant="27" id="5Oh-AF-YMT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9lZ-Rt-Sno" secondAttribute="trailing" constant="60" id="LjW-dc-rBb"/>
+                            <constraint firstItem="9lZ-Rt-Sno" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="Rj0-sP-VBs"/>
+                            <constraint firstItem="WdZ-ID-QPU" firstAttribute="top" secondItem="CTZ-or-c37" secondAttribute="top" id="UAF-1r-jMz"/>
+                            <constraint firstItem="37H-ab-t3a" firstAttribute="top" secondItem="AAQ-WP-UHI" secondAttribute="bottom" constant="34" id="Z01-98-1rm"/>
+                            <constraint firstItem="CTZ-or-c37" firstAttribute="leading" secondItem="WdZ-ID-QPU" secondAttribute="trailing" constant="15" id="aBW-Rp-gd8"/>
+                            <constraint firstItem="CTZ-or-c37" firstAttribute="leading" secondItem="xvZ-lr-CKe" secondAttribute="leading" id="cEE-H8-rRF"/>
+                            <constraint firstItem="CTZ-or-c37" firstAttribute="trailing" secondItem="xvZ-lr-CKe" secondAttribute="trailing" id="ejT-FV-Y9C"/>
+                            <constraint firstItem="9lZ-Rt-Sno" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="gix-AP-j85"/>
+                            <constraint firstItem="37H-ab-t3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mts-G1-Kyg"/>
+                            <constraint firstItem="WdZ-ID-QPU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="nFY-GG-tD8"/>
+                            <constraint firstItem="WdZ-ID-QPU" firstAttribute="leading" secondItem="AAQ-WP-UHI" secondAttribute="leading" id="oH2-ol-oFY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CTZ-or-c37" secondAttribute="trailing" constant="85" id="zwT-Sq-Wty"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="appTitle" destination="9lZ-Rt-Sno" id="Wbc-Po-7L3"/>
+                        <outlet property="fNameDes" destination="WdZ-ID-QPU" id="oza-nH-2hX"/>
+                        <outlet property="lNameDes" destination="AAQ-WP-UHI" id="70U-Ko-qY9"/>
+                        <outlet property="textField1" destination="CTZ-or-c37" id="3YG-fY-VJb"/>
+                        <outlet property="textField2" destination="xvZ-lr-CKe" id="6Rk-oV-kHX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="5.3571428571428568"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
+    </resources>
 </document>
